@@ -1,4 +1,4 @@
-# この問題はACしていない。
+# この問題はACしていない。2つのテストでLTEになる。
 N, K = map(int, input().split())
 A = list(map(int, input().split()))
 
