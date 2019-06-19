@@ -1,3 +1,8 @@
+###########################################################
+# AtCoder Beginner Contest 043
+# B - バイナリハックイージー / Unhappy Hacking (ABC Edit)
+# https://atcoder.jp/contests/abc043/tasks/abc043_b
+###########################################################
 str = input()
 output = ""
 for n in str:

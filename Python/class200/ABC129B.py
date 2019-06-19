@@ -1,3 +1,8 @@
+###########################################################
+# AtCoder Beginner Contest 129
+# B - Balance
+# https://atcoder.jp/contests/abc129/tasks/abc129_b
+###########################################################
 N = input()
 W = list(map(int, input().split()))
 ans = sum(W)

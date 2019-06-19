@@ -1,3 +1,8 @@
+###########################################################
+# AtCoder Beginner Contest 047
+# B - すぬけ君の塗り絵 2 イージー / Snuke's Coloring 2 (ABC Edit)
+# https://atcoder.jp/contests/abc047/tasks/abc047_b
+###########################################################
 W, H, N = map(int, input().split())
 l = d = 0
 u = H

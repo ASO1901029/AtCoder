@@ -1,3 +1,8 @@
+###########################################################
+# AtCoder Beginner Contest 045
+# B - 3人でカードゲームイージー / Card Game for Three (ABC Edit)
+# https://atcoder.jp/contests/abc045/tasks/abc045_b
+###########################################################
 s = {}
 s['a'] = list(input())
 s['b'] = list(input())
