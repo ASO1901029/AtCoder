@@ -1,3 +1,8 @@
+###########################################################
+# AtCoder Beginner Contest 130
+# C - Rectangle Cutting
+# https://atcoder.jp/contests/abc130/tasks/abc130_c
+###########################################################
 W,H,x,y = map(int,input().split())
 w = W/2
 h = H/2

@@ -1,3 +1,8 @@
+###########################################################
+# AtCoder Beginner Contest 129
+# C - Typical Stairs
+# https://atcoder.jp/contests/abc129/tasks/abc129_c
+###########################################################
 import sys
 
 N, W = sys.stdin.readline().split()
