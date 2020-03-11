@@ -3,17 +3,16 @@ B = int(input())
 C = int(input())
 D = int(input())
 E = int(input())
+ls = [A,B,C,D,E]
 
-import itertools
+last = -1
+amari = 10
+tmp = -1
+for i in range(5):
+    if ls[i] %10 != 0:
+        if amari > ls[i] % 10:
+            amari = ls[i] % 10
+            tmp = i
+        ls[i] += 10 -ls[i] % 10
 
-ls = [A, B, C, D, E]
-p = list(itertools.permutations(ls, 5))
-ans = 124*5
-for i,v in enumerate(p):
-    t = 0
-    for j in range(5):
-        if t%10 != 0:
-            t += 10- t%10
-        t += v[j]
-    ans = min(t,ans)
-print(ans)
+print(sum(ls)-(10-amari))
