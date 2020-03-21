@@ -23,8 +23,9 @@ class GenerateFiles:
                 if os.path.exists(file_path):
                     print(f'{c}:ファイルが既に存在しています')
                 else:
-                    f = open(file_path,'w')
+                    f = open(file_path, 'w')
                     f.close()
+                    print(f'{contest_name}/{c} を作成しました')
 
 
 if __name__ == '__main__':
