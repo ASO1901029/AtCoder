@@ -1,0 +1,5 @@
+A, B, C = map(int, input().split())
+K = int(input())
+total = sum([A, B, C])
+high = max(A, B, C)
+print(total - high + high * 2**K)
