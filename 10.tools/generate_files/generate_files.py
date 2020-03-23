@@ -65,8 +65,8 @@ class GenerateFiles:
             else:
                 f = open(test_path, 'w')
                 lines = f'def resolve():\n'
-                lines += f'\tfrom {contest_name}.{contest} import {c}\n'
-                lines += f'\t{c}.main()'
+                lines += f'    from {contest_name}.{contest} import {c}\n'
+                lines += f'    {c}.main()\n\n'
                 f.write(lines)
                 f.close()
                 print(f'{folder}{c}_test.py を生成しました')
