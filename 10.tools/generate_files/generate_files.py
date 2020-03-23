@@ -1,5 +1,7 @@
 import os, requests, shutil
 
+is_create_tests = True  # テストファイルを生成しない場合はFalseに
+
 
 class GenerateFiles:
     def main(self):
@@ -21,10 +23,11 @@ class GenerateFiles:
             if contest_name == 'ARC':
                 create_count = 4
         else:
-            folder = f'../../others/{contest}/'
+            contest_name = 'others'
+            folder = f'../../{contest_name}/{contest}/'
             print('問題は何問ですか？　4:Dまで、6:Fまで、10:J、25:Zまでを生成します（最大25問）')
             create_count = int(input())
-            print(f'A~{questions[create_count-1]}問題で作成します')
+            print(f'A~{questions[create_count - 1]}問題で作成します')
         use_template = False
         if os.path.isfile(template):
             print('テンプレートを使用します')
@@ -44,6 +47,8 @@ class GenerateFiles:
         for i in range(create_count):
             c = questions[i]
             file_path = f'{folder}{c}.py'
+            test_path = f'{folder}{c}_test.py'
+            # ファイルの生成
             if os.path.exists(file_path):
                 print(f'{c}:ファイルが既に存在しています')
             else:
@@ -54,6 +59,17 @@ class GenerateFiles:
                     f = open(file_path, 'w')
                     f.close()
                     print(f'{folder}{c}.py を生成しました')
+            # テストの生成
+            if os.path.exists(test_path):
+                print(f'{c}_test:ファイルが既に存在しています')
+            else:
+                f = open(test_path, 'w')
+                lines = f'def resolve():\n'
+                lines += f'\tfrom {contest_name}.{contest} import {c}\n'
+                lines += f'\t{c}.main()'
+                f.write(lines)
+                f.close()
+                print(f'{folder}{c}_test.py を生成しました')
 
 
 if __name__ == '__main__':
