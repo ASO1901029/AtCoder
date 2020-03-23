@@ -7,19 +7,14 @@ def main():
     from heapq import heappop, heappush
     from fractions import gcd
     import sys, re, math, copy
-    sys.setrecursionlimit(10 ** 6)  # 再帰上限を10＊＊6に
+    sys.setrecursionlimit(10 ** 6)
 
     input = sys.stdin.readline
     input_list = (lambda: input().rstrip().split())
-    input_number = (lambda: map(int, input().rstrip().split()))
+    input_number = (lambda: int(input()))
     input_number_list = (lambda: list(map(int, input_list())))
 
     N = input_number()
 
-
-def resolve():
-    main()
-
-
 if __name__ == '__main__':
-    resolve()
+    main()
