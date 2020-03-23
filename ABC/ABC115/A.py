@@ -1,5 +1,5 @@
 def main():
-    from builtins import int, map,list, print
+    from builtins import int, map, list, print
     import sys
 
     input = sys.stdin.readline
@@ -12,15 +12,16 @@ def main():
     ans = 'Christmas'
     r = 25 - D
     for i in range(r):
-        ans+=' Eve'
+        ans += ' Eve'
     print(ans)
+
 
 def resolve():
     main()
 
+
 if __name__ == '__main__':
     resolve()
-
 
 import sys
 import unittest
@@ -36,14 +37,17 @@ class TestClass(unittest.TestCase):
         out = sys.stdout.read()[:-1]
         sys.stdout, sys.stdin = stdout, stdin
         self.assertEqual(out, output)
+
     def test_入力例_1(self):
         input = """25"""
         output = """Christmas"""
         self.assertIO(input, output)
+
     def test_入力例_2(self):
         input = """22"""
         output = """Christmas Eve Eve Eve"""
         self.assertIO(input, output)
+
 
 if __name__ == "__main__":
     unittest.main()
