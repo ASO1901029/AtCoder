@@ -1,14 +1,22 @@
-# NG
-###########################################################
-# AtCoder Beginner Contest 133
-# C - Remainder Minimization 2019
-# https://atcoder.jp/contests/abc133/tasks/abc133_c
-###########################################################
-L, R = map(int, input().split())
-l = L % 2019
-ans = l * (l + 1)
-Lw = int(L / 2019)
-Rw = int(R / 2019)
-if Rw - Lw >= 1:
-    ans = 0
-print(ans)
+def main():
+    from builtins import int, map, list, print
+    import sys
+    sys.setrecursionlimit(10 ** 6)
+
+    input = sys.stdin.readline
+    input_list = (lambda: input().rstrip().split())
+    input_number_list = (lambda: list(map(int, input_list())))
+
+    L, R = input_number_list()
+    m = float('inf')
+    for i in range(L, R):
+        for j in range(i + 1, R + 1):
+            m = min(m, (i * j) % 2019)
+            if m == 0:
+                print(0)
+                exit()
+    print(m)
+
+
+if __name__ == '__main__':
+    main()
